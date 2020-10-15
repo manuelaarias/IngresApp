@@ -1,10 +1,13 @@
 package com.example.login
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -19,6 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+
 
 
 enum class ProviderType{
@@ -64,9 +68,13 @@ class InicioActivity : AppCompatActivity() {
                     cerrarSesion()
                     true
                 }
-                R.id.nav_gallery -> {
+                R.id.nav_home -> {
                     drawerLayout.openDrawer(GravityCompat.START);
                     true
+                }
+                R.id.nav_gallery ->{
+                    val home = Intent(this, toma::class.java)
+                    startActivity(home)
                 }
             }
             it.isChecked = true
@@ -76,6 +84,7 @@ class InicioActivity : AppCompatActivity() {
         }
 
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

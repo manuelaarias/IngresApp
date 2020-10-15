@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".toma">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        tools:layout_editor_absoluteY="40dp">
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro Ingreso" />
+
+        <TextView
+            android:id="@+id/idfechas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha" />
+
+        <EditText
+            android:id="@+id/editfecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/ididentificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de identificacion" />
+
+        <EditText
+            android:id="@+id/editipodeid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/idedades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edad" />
+
+        <EditText
+            android:id="@+id/editedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/idcelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Numero de celular" />
+
+        <EditText
+            android:id="@+id/editnumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo" />
+
+        <RadioGroup
+            android:id="@+id/idSexo"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <RadioButton
+                android:id="@+id/idfemenino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Femenino" />
+
+            <RadioButton
+                android:id="@+id/idmasculino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masculino" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/idfiebre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ha tenido fiebre igual o mayor a 38 grados celsius?" />
+
+        <Switch
+            android:id="@+id/idcovid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ha tenido contacto con alguna persona positiva para Covid-19 en los ultimos 15 dias?" />
+
+        <Switch
+            android:id="@+id/iddolores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ha tenido dolores musculares?" />
+
+        <Switch
+            android:id="@+id/idgarganta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ha tenido dolor de garganta?" />
+
+        <Switch
+            android:id="@+id/idenfermedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ha tenido diarrea?" />
+
+        <Switch
+            android:id="@+id/iddolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ha tenido vomito?" />
+
+        <Button
+            android:id="@+id/pad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_menu_save"
+            android:text="Guardar" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
