@@ -9,7 +9,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="menu_gallery">Histórico</string>
-    <string name="menu_slideshow">Contactenos</string>
+    <string name="menu_gallery">Registar</string>
+    <string name="menu_slideshow">Historial</string>
     <string name="menu_cerrar">Cerrar Sesion</string>
 </resources>

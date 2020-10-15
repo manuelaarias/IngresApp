@@ -76,6 +76,10 @@ class InicioActivity : AppCompatActivity() {
                     val home = Intent(this, toma::class.java)
                     startActivity(home)
                 }
+                R.id.nav_slideshow ->{
+                    val historial = Intent(this, historial::class.java)
+                    startActivity(historial)
+                }
             }
             it.isChecked = true
             drawerLayout.closeDrawers()

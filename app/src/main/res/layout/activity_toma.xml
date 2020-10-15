@@ -21,52 +21,48 @@
             android:text="Registro Ingreso" />
 
         <TextView
-            android:id="@+id/idfechas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fecha" />
 
         <EditText
-            android:id="@+id/editfecha"
+            android:id="@+id/idfechas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="date|textPersonName" />
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Identificacion" />
+
+        <EditText
             android:id="@+id/ididentificacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tipo de identificacion" />
-
-        <EditText
-            android:id="@+id/editipodeid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/idedades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edad" />
 
         <EditText
-            android:id="@+id/editedad"
+            android:id="@+id/idedades"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/idcelular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Numero de celular" />
 
         <EditText
-            android:id="@+id/editnumero"
+            android:id="@+id/celular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -83,13 +79,13 @@
             android:layout_height="64dp">
 
             <RadioButton
-                android:id="@+id/idfemenino"
+                android:id="@+id/femenino"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Femenino" />
 
             <RadioButton
-                android:id="@+id/idmasculino"
+                android:id="@+id/masculino"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Masculino" />
