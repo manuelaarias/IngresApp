@@ -33,8 +33,10 @@ class InicioActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    override fun onCreate(savedInstanceState: Bundle?) {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        val bundle = intent.extras
+        val correo = bundle?.getString("email")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -73,11 +75,15 @@ class InicioActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_gallery ->{
-                    val home = Intent(this, toma::class.java)
+                    val home = Intent(this, toma::class.java).apply {
+                        putExtra("email", correo)
+                    }
                     startActivity(home)
                 }
                 R.id.nav_slideshow ->{
-                    val historial = Intent(this, historial::class.java)
+                    val historial = Intent(this, historial::class.java).apply {
+                        putExtra("email", correo)
+                    }
                     startActivity(historial)
                 }
             }

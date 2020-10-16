@@ -14,10 +14,12 @@ import java.util.*
 class toma : AppCompatActivity() {
     // Access a Cloud Firestore instance from your Activity
     private val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toma)
         setup()
+
     }
     private fun setup(){
         pad.setOnClickListener{
@@ -47,10 +49,11 @@ class toma : AppCompatActivity() {
         data["garganta"] =if(idgarganta.isChecked) "Si" else "No"
         data["enfermedad"] =if(idenfermedad.isChecked) "Si" else "No"
         data["dolor"] =if(iddolor.isChecked) "Si" else "No"
-
+        val bundle = intent.extras
+        val correo = bundle?.getString("email")
 
 // Add a new document with a generated ID
-        db.collection("registros").document(ididentificacion.text.toString()).collection("ingresos")
+        db.collection("registros").document(correo.toString()).collection("ingresos")
             .add(data)
             .addOnSuccessListener {
                 alerta("Registro Guardado", "Ok")
